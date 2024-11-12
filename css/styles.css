@@ -1,0 +1,80 @@
+/* Reset some default browser styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Split layout container */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Split sections */
+.split {
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+}
+
+/* Left section (Bio) */
+.left {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+/* Right section (Projects) */
+.right {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+/* Centered content */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Project list styles */
+.projects {
+    list-style-type: none;
+}
+
+.projects li {
+    margin: 20px 0;
+    padding: 10px;
+    border-bottom: 1px solid #bdc3c7;
+}
+
+.projects h3 {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.projects a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.projects a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .split {
+        width: 100%;
+        height: 50%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}
